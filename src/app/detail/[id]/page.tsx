@@ -1,8 +1,11 @@
+import { getOrigin } from '@/app/_util/setting';
 import React from 'react'
 
 const getProductDetailById = async (id: string) => {
     if(!id) return null;
-    const res = await fetch(`http://localhost:3000/api/store_app/product/${id}`);
+    const host = await getOrigin();
+    console.log(host)
+    const res = await fetch(`${host}/api/store_app/product?id=${id}`);
     const data = await res.json();
     return data.content;
 }

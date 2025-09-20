@@ -1,9 +1,11 @@
 //tsrafce
 import React from 'react'
+import { getOrigin } from '../_util/setting';
 
 //server action: Hàm trên máy server
 const getAllProducts = async (): Promise<any[]> => {
-    const res = await fetch('http://localhost:3000/api/product_cache');
+    const host = await getOrigin();
+    const res = await fetch(`${host}/api/product_cache`);
     const data = await res.json();
     return data;
 }

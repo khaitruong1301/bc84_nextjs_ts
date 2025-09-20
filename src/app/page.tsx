@@ -1,5 +1,6 @@
 import next from 'next';
 import React, { cache } from 'react'
+import { getOrigin } from './_util/setting';
 export const revalidate = 60; // In seconds
 //Call api
 //Viết server action
@@ -8,7 +9,10 @@ export const revalidate = 60; // In seconds
   Sau này backend gốc có thay đổi dữ liệu ta chỉ sửa trong lớp api route mà không phải đi sửa từng code trên giao diện component
 */
 const getAllProducts = async (): Promise<any[]> => {
-    const res = await fetch('http://localhost:3000/api/store_app/product');
+
+    const host = await getOrigin();
+
+    const res = await fetch(`${host}/api/store_app/product`);
     const data = await res.json();
     return data;
 }
