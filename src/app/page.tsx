@@ -1,5 +1,6 @@
-import React from 'react'
-
+import next from 'next';
+import React, { cache } from 'react'
+export const revalidate = 60; // In seconds
 //Call api
 //Viết server action
 //Sử dụng api Route để tạo api riêng 
@@ -25,7 +26,6 @@ const getAllProductsByStoreApi = async (): Promise<any[]> => {
 type Props = {}
 const page = async(props: Props) => {
   const data:any = await getAllProductsByStoreApi();
-  console.log('data', data);
   return (
     <div className='container'>
         <h1>Danh sách sản phẩm</h1>

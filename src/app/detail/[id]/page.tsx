@@ -4,7 +4,6 @@ const getProductDetailById = async (id: string) => {
     if(!id) return null;
     const res = await fetch(`http://localhost:3000/api/store_app/product/${id}`);
     const data = await res.json();
-    console.log('data',data)
     return data.content;
 }
 

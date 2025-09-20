@@ -1,5 +1,6 @@
-//tsrafce
 'use client'
+//tsrafce
+export const dynamic = "force-static"; // ép SSG
 import { useFormik } from 'formik'
 import { useRouter } from 'next/navigation';
 import React from 'react'
