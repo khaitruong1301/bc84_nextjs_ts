@@ -7,5 +7,8 @@ export async function GET(request:NextRequest){
         {id:3,name:'Xiaomi Mi 13 Pro'},
     ];
 
+    
+
+
     return NextResponse.json(products);
 }
