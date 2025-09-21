@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://bc84-nextjs-ts-vjf5.vercel.app
+
+# Sitemaps
+Sitemap: https://bc84-nextjs-ts-vjf5.vercel.app/sitemap.xml

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Domain thực tế -->
+    <url>
+        <loc>https://bc84-nextjs-ts-vjf5.vercel.app/</loc>
+        <lastmod>2025-09-21</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://bc84-nextjs-ts-vjf5.vercel.app/detail/1</loc>
+        <lastmod>2025-09-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://bc84-nextjs-ts-vjf5.vercel.app/detail/2</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://bc84-nextjs-ts-vjf5.vercel.app/login</loc>
+        <lastmod>2025-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://bc84-nextjs-ts-vjf5.vercel.app/register</loc>
+        <lastmod>2025-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://bc84-nextjs-ts-vjf5.vercel.app/search</loc>
+        <lastmod>2025-09-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+</urlset>

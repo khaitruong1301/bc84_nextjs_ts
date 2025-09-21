@@ -1,0 +1,15 @@
+# robots.txt cho Next.js
+User-agent: *
+Allow: /
+
+# Chặn các đường dẫn nội bộ của Next.js và API
+Disallow: /_next/
+Disallow: /static/
+Disallow: /api/
+
+# Nếu cần chặn trang quản trị hoặc thử nghiệm, mở comment và chỉnh
+# Disallow: /admin/
+# Disallow: /staging/
+
+# Sitemap (thay example.com bằng domain thật của bạn)
+Sitemap: https://bc84-nextjs-ts-vjf5.vercel.app/sitemap.xml
