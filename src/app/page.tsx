@@ -8,6 +8,58 @@ export const revalidate = 60; // In seconds
 /*
   Sau này backend gốc có thay đổi dữ liệu ta chỉ sửa trong lớp api route mà không phải đi sửa từng code trên giao diện component
 */
+
+
+import { Metadata } from "next";
+
+// ✅ Metadata cho Server Component
+export const metadata: Metadata = {
+  title: "Shoes App – Latest Shoe Collection",
+  description:
+    "Discover the latest collection of shoes in our Shoes App. Find detailed descriptions and reviews for all products.",
+
+  // Open Graph (Facebook, Zalo, LinkedIn…)
+  openGraph: {
+    title: "Shoes App – Latest Shoe Collection",
+    description:
+      "Discover and shop the latest shoes collection with detailed reviews.",
+    url: "https://bc84-nextjs-ts-vjf5.vercel.app/",
+    siteName: "Cybersoft Shoes App",
+    images: [
+      {
+        url: "https://apistore.cybersoft.edu.vn/images/converse-chuck-taylor.png", // Thay bằng link ảnh thật
+        width: 800,
+        height: 600,
+        alt: "Latest Shoes Collection",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    title: "Shoes App – Latest Shoe Collection",
+    description:
+      "Discover and shop the latest shoes collection with detailed reviews.",
+    images: [
+      "https://apistore.cybersoft.edu.vn/images/van-old-school.png", // Thay bằng link ảnh thật
+    ],
+    creator: "@yourtwitter", // optional
+  },
+
+  // JSON-LD Schema.org
+  other: {
+    "script:type=application/ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Shoes App – Latest Shoe Collection",
+      description: "Discover and shop the latest collection of shoes.",
+      url: "https://yourdomain.com",
+    }),
+  },
+};
 const getAllProducts = async (): Promise<any[]> => {
 
     const host = await getOrigin();
