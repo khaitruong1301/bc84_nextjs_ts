@@ -12,54 +12,31 @@ export const revalidate = 60; // In seconds
 
 import { Metadata } from "next";
 
-// ✅ Metadata cho Server Component
 export const metadata: Metadata = {
-  title: "Shoes App – Latest Shoe Collection",
-  description:
-    "Discover the latest collection of shoes in our Shoes App. Find detailed descriptions and reviews for all products.",
-
-  // Open Graph (Facebook, Zalo, LinkedIn…)
+  title: "Trang chủ | My Website",
+  description: "Đây là trang chủ của website My Website, nơi chia sẻ kiến thức và tin tức mới nhất.",
+  keywords: ["Next.js 15", "Home Page", "SEO", "Website"],
   openGraph: {
-    title: "Shoes App – Latest Shoe Collection",
-    description:
-      "Discover and shop the latest shoes collection with detailed reviews.",
-    url: "https://bc84-nextjs-ts-vjf5.vercel.app/",
-    siteName: "Cybersoft Shoes App",
+    title: "Trang chủ | My Website",
+    description: "Chào mừng bạn đến với My Website!",
+    url: process.env.SITE_URL || "https://bc84-nextjs-ts-vjf5.vercel.app",
+    siteName: "My Website",
     images: [
       {
-        url: "https://apistore.cybersoft.edu.vn/images/converse-chuck-taylor.png", // Thay bằng link ảnh thật
-        width: 800,
-        height: 600,
-        alt: "Latest Shoes Collection",
+        url: `${process.env.SITE_URL || "https://apistore.cybersoft.edu.vn/images/converse-chuck-taylor.png"}`,
+        width: 1200,
+        height: 630,
+        alt: "Ảnh đại diện website",
       },
     ],
-    locale: "en_US",
+    locale: "vi_VN",
     type: "website",
   },
-
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    title: "Shoes App – Latest Shoe Collection",
-    description:
-      "Discover and shop the latest shoes collection with detailed reviews.",
-    images: [
-      "https://apistore.cybersoft.edu.vn/images/van-old-school.png", // Thay bằng link ảnh thật
-    ],
-    creator: "@yourtwitter", // optional
-  },
-
-  // JSON-LD Schema.org
-  other: {
-    "script:type=application/ld+json": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      name: "Shoes App – Latest Shoe Collection",
-      description: "Discover and shop the latest collection of shoes.",
-      url: "https://yourdomain.com",
-    }),
+  alternates: {
+    canonical: process.env.SITE_URL || "https://bc84-nextjs-ts-vjf5.vercel.app",
   },
 };
+
 const getAllProducts = async (): Promise<any[]> => {
 
     const host = await getOrigin();

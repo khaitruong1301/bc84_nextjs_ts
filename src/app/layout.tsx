@@ -4,64 +4,6 @@ import Header from "./_component/Header";
 import { Roboto } from "next/font/google";
 import ReduxComponent from "./_component/ReduxComponent";
 
-const Metadata: Metadata = {
-  title: {
-    default: "Cybersoft Shoes App",
-    template: "%s | Cybersoft Shoes",
-  },
-  description:
-    "Discover the latest collection of shoes in Cybersoft Shoes App. Find detailed descriptions and reviews for all products.",
-
-  // OpenGraph (Facebook, Zalo, LinkedIn…)
-  openGraph: {
-    title: "Cybersoft Shoes App – Latest Shoe Collection",
-    description:
-      "Shop the latest shoes collection with detailed reviews on Cybersoft Shoes App.",
-    url: "https://bc84-nextjs-ts-vjf5.vercel.app/",
-    siteName: "Cybersoft Shoes App",
-    images: [
-      {
-        url: "https://apistore.cybersoft.edu.vn/images/converse-chuck-taylor.png",
-        width: 800,
-        height: 600,
-        alt: "Latest Shoes Collection",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    title: "Cybersoft Shoes App – Latest Shoe Collection",
-    description:
-      "Discover and shop the latest shoes collection with detailed reviews.",
-    images: [
-      "https://apistore.cybersoft.edu.vn/images/van-old-school.png",
-    ],
-    creator: "@cybersoft",
-  },
-
-  // Favicon và manifest
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-  manifest: "/site.webmanifest",
-
-  // JSON-LD schema.org (dùng metadata.other để nhúng)
-  other: {
-    "script:type=application/ld+json": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      name: "Cybersoft Shoes App",
-      description:
-        "Discover and shop the latest collection of shoes on Cybersoft Shoes App.",
-      url: "https://yourdomain.com",
-    }),
-  },
-};
 
 
 const robotoFont = Roboto({
