@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Trang chủ | My Website",
     description: "Chào mừng bạn đến với My Website!",
-    url: process.env.SITE_URL || "https://bc84-nextjs-ts-vjf5.vercel.app",
+    url: process.env.SITE_URL || "https://bc84-nextjs-ts-vjf5.vercel.app" || "http://www.cybersoftnextjs.online",
     siteName: "My Website",
     images: [
       {

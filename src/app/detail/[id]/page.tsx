@@ -35,7 +35,7 @@ export async function generateMetadata({
         openGraph: {
             title: `${product.name} – Cybersoft Shoes`,
             description: `${product.description}`,
-            url: process.env.SITE_URL || `https://bc84-nextjs-ts-vjf5.vercel.app/detail/${params.id}`,
+            url: process.env.SITE_URL || `https://bc84-nextjs-ts-vjf5.vercel.app/detail/${params.id}` || `http://www.cybersoftnextjs.online/detail/${params.id}`,
             siteName: `${product.name} – Cybersoft Shoes`,
             images: [
                 {
